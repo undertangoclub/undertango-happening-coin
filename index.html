@@ -25,7 +25,7 @@
       h1 {
         color: #333;
       }
-      .google-btn {
+      .adventure-btn {
         background-color: #4285f4;
         color: #ffffff;
         border: none;
@@ -35,24 +35,23 @@
         border-radius: 5px;
         margin-top: 20px;
       }
-      .google-btn:hover {
+      .adventure-btn:hover {
         background-color: #357ae8;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>Bienvenidos al Undertango Happening Coin</h1>
-      <button class="google-btn" onclick="registerWithGoogle()">
-        Registrarse con Google
+      <h1>Bienvenido al juego de los UnderTango Coin, donde todos ganan</h1>
+      <button class="adventure-btn" onclick="comenzarAventura()">
+        Vamos con todo
       </button>
     </div>
 
     <script>
-      function registerWithGoogle() {
-        // Aquí iría la lógica de autenticación con Google.
-        // Por ahora, simplemente muestra un mensaje.
-        alert("Función de registro con Google activada.");
+      function comenzarAventura() {
+        // Redirige a intro.html cuando se hace clic en el botón.
+        window.location.href = "pages/intro.html";
       }
     </script>
   </body>
