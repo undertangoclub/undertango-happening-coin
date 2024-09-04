@@ -76,17 +76,14 @@
           .signInWithPopup(provider)
           .then((result) => {
             // This gives you a Google Access Token. You can use it to access the Google API.
-            const credential = result.credential;
-            const token = credential.accessToken;
-            // The signed-in user info.
             const user = result.user;
             console.log("Usuario registrado:", user);
             alert("Registro exitoso! Bienvenido, " + user.displayName + "!");
-            // Aquí puedes redirigir al usuario a otra página o realizar otras acciones
+            // Redirigir al formulario después del registro
+            window.location.href = "formulario.html";
           })
           .catch((error) => {
             // Handle Errors here.
-            const errorCode = error.code;
             const errorMessage = error.message;
             console.error("Error en el registro:", errorMessage);
             alert("Error en el registro: " + errorMessage);
