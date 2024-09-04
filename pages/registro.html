@@ -54,17 +54,19 @@
 
     <script>
       // Your web app's Firebase configuration
+      require("dotenv").config();
+
       const firebaseConfig = {
-        apiKey: "AIzaSyDPOqsSow8M9KWohuZzH7N-tr_NF_2mLew",
-        authDomain: "ut-coin.firebaseapp.com",
-        projectId: "ut-coin",
-        storageBucket: "ut-coin.appspot.com",
-        messagingSenderId: "628936536007",
-        appId: "1:628936536007:web:88176e0bc957ac5f9e73e2",
-        measurementId: "G-DRPDJVSDZ6",
+        apiKey: process.env.FIREBASE_API_KEY,
+        authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+        projectId: process.env.FIREBASE_PROJECT_ID,
+        storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+        messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+        appId: process.env.FIREBASE_APP_ID,
+        measurementId: process.env.FIREBASE_MEASUREMENT_ID,
       };
 
-      // Initialize Firebase
+      // Inicializar Firebase
       firebase.initializeApp(firebaseConfig);
 
       // Google Sign-In
